@@ -3,7 +3,7 @@ import csv
 import matplotlib.pyplot as plt
 from pandas import read_csv
 import numpy as np
-try1 = read_csv("sample.csv",header=0)
+try1 = read_csv("reviews.csv",header=0)
 h1=try1['names']
 t1=[]
 t2=[]
@@ -17,7 +17,7 @@ t=[]
 no=[]
 name=[]  
 
-with open('sample.csv') as csvfile:
+with open('reviews.csv') as csvfile:
     reader=csv.reader(csvfile)
     for line in reader:
         no.append(line[0])
@@ -42,7 +42,7 @@ teacher=[no[0],name[0],t1[0],t2[0],t3[0],t4[0],t5[0],t6[0],t7[0],t8[0]]
 tea=input("enter the teacher name")
 ind = teacher.index(tea)
 #print(ind)
-with open('sample.csv') as csvfile:
+with open('reviews.csv') as csvfile:
     reader=csv.reader(csvfile)
     for line in reader:
         t.append(line[ind])
@@ -87,7 +87,7 @@ import csv
 L=[]
 #print(h1[0])
 
-with open('sample.csv') as csvfile:
+with open('reviews.csv') as csvfile:
     reader=csv.reader(csvfile)
     for col in reader:
         L.append(col[1])
